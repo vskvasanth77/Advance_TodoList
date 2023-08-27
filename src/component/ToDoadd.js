@@ -81,14 +81,16 @@ const ToDoadd = () => {
   return (
     <>
       <div className="app">
-        <h1>To-do List</h1>
+        <h1 className="header">Task Notes</h1>
+
         <div className="todo-wrapper">
           <div className="todo-input">
             <div className="todo-input-item">
-              <label htmlFor="">Title</label>
+              <label htmlFor="title">Title</label>
               <input
+                id="title"
                 type="text"
-                placeholder="Enter the title"
+                placeholder="What's the title?"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
@@ -97,7 +99,7 @@ const ToDoadd = () => {
               <label htmlFor=""> Notes</label>
               <input
                 type="text"
-                placeholder="Enter your notes"
+                placeholder="Whats the note ?"
                 value={description}
                 onChange={(e) => {
                   setDescription(e.target.value);
@@ -132,11 +134,11 @@ const ToDoadd = () => {
               allTodos.map((item, index) => {
                 return (
                   <div className="todo-list-item" key={index}>
-                    <div className="div">
-                      <h1>{item.title}</h1>
-                      <p>{item.description}</p>
+                    <div className="todo-list-item-column">
+                      <h1 className="h3">{item.title}</h1>
+                      <p className="p">{item.description}</p>
                     </div>
-                    <div className="btncontainerr">
+                    <div className="btncontainer">
                       <i
                         className="fa-solid fa-trash icon "
                         onClick={() => deletehandler(index)}
@@ -155,12 +157,14 @@ const ToDoadd = () => {
               completedTodos.map((item, index) => {
                 return (
                   <div className="todo-list-item" key={index}>
-                    <div className="div">
-                      <h1>{item.title}</h1>
-                      <p>{item.description}</p>
-                      <p>{item.completedOn}</p>
+                    <div className="todo-list-item-column">
+                      <h1 className="h3">{item.title}</h1>
+                      <p className="p">{item.description}</p>
+                      <p className="p">
+                        <small>{item.completedOn}</small>
+                      </p>
                     </div>
-                    <div className="btncontainerr">
+                    <div className="btncontainer">
                       <i
                         className="fa-solid fa-trash icon "
                         onClick={() => deleteCompletedhandler(index)}

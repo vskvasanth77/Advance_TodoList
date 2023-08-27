@@ -197,4 +197,11 @@ h1 {
   .todo-input-item input {
     width: 35rem;
   }
+
+  .h3 {
+    font-size: 2rem;
+  }
+  .p {
+    font-size: 1.8rem;
+  }
 }

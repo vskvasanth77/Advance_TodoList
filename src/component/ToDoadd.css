@@ -77,6 +77,7 @@ h1 {
   background-color: #e1367d;
   color: white;
   border: none;
+
   border-radius: 0.2rem;
   margin-top: 2.5rem;
   padding: 1rem;
@@ -193,9 +194,11 @@ h1 {
     gap: 2rem;
     margin-top: 4rem;
   }
-
+  .todo-input-item label {
+    font-size: 2rem;
+  }
   .todo-input-item input {
-    width: 35rem;
+    width: 40rem;
   }
 
   .h3 {
@@ -203,5 +206,8 @@ h1 {
   }
   .p {
     font-size: 1.8rem;
+  }
+  .primaryBtn {
+    width: 8rem;
   }
 }
